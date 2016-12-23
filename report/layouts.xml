@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <template id="assets_common"
+                  inherit_id="report.assets_common">
+            <xpath expr="." position="inside">
+                <link href="/profile_mfgt/static/src/css/report.css" rel="stylesheet"/>
+            </xpath>
+        </template>
+
+        <template id="external_layout_header">
+            <div class="header" style="font-size: 7pt; margin-bottom: 10px">
+                <div class="row">
+                    <div class="col-xs-7">
+                        <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height: 80px;"/>
+                    </div>
+                    <div class="col-xs-5"
+                         t-field="company.partner_id"
+                         t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                </div>
+                <div class="row">
+                    <div class="col-xs-5 col-xs-offset-7">
+                        <span t-field="company.phone"/> / <span t-field="company.email"/> / <span t-field="company.website"/><br/>
+                        UID / MWSt.: CHE-109.029.890<br/>
+                        IBAN: CH19 0900 0000 8400 3086 2
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="external_layout_footer">
+            <div class="footer mfgt-report-footer">
+                <div class="mfgt-report-footer-wrapper">
+                    <b>Flugplatz Lommis TG</b>
+                    <b>Flugschule</b>
+                    <b>Rundflüge</b>
+                    <b>Flugzeug-Charter</b>
+                    <b>Luftfahrzeug-Unterhaltsbetrieb</b>
+                </div>
+            </div>
+        </template>
+
+        <template id="external_layout"
+                  inherit_id="report.external_layout">
+            <xpath expr="//t[@t-call='report.external_layout_header']"
+                   position="replace">
+                <t t-call="profile_mfgt.external_layout_header"/>
+            </xpath>
+            <xpath expr="//t[@t-call='report.external_layout_footer']"
+                   position="replace">
+                <t t-call="profile_mfgt.external_layout_footer"/>
+            </xpath>
+        </template>
+        
+    </data>
+</odoo>

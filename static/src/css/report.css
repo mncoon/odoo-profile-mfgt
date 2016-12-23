@@ -1,0 +1,8 @@
+div.mfgt-report-footer b {
+    float: left;
+    margin-right: 30px;
+}
+
+div .mfgt-report-footer b:last-child {
+    margin-right: 0;
+}

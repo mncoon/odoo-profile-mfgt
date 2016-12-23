@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_purchasequotation_document"
+                  inherit_id="purchase.report_purchasequotation_document">
+            <xpath expr="//span[@t-field='order_line.date_planned']"
+                   position="replace">
+                <span t-field="order_line.date_planned"
+                      t-field-options='{"date_only": true}'/>
+            </xpath>
+        </template>
+        
+    </data>
+</odoo>
