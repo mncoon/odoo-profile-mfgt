@@ -18,6 +18,7 @@
         'report/layouts.xml',
         'report/report_saleorder.xml',
         'report/report_purchasequotation.xml',
+        'report/report_invoice.xml',
     ],
     'installable': True,
     'application': False,
