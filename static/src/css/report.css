@@ -1,8 +1,5 @@
-div.mfgt-report-footer b {
-    float: left;
-    margin-right: 28px;
-}
 
-div .mfgt-report-footer b:last-child {
-    margin-right: 0;
+div.footer {
+    text-align: justify;
+    white-space: nowrap;
 }

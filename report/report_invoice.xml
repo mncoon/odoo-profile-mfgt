@@ -8,10 +8,10 @@
                    position="attributes">
                 <attribute name="class">col-xs-5</attribute>
             </xpath>
-            <xpath expr="//div[@class='row'][1]"
-                   postion="inside">
-                <div class="class='col-xs-5 col-xs-offset-7">
-                    <span t-field="o.company_id.city"/>, <span t-field="o.date_invoice"/>
+            <xpath expr="//h2" position="before">
+                <div class="text-right">
+                    <span t-field="o.company_id.city"/>,
+                    <span t-field="o.date_invoice"/>
                 </div>
             </xpath>
             <xpath expr="//div[@class='row mt32 mb32']/div[@t-if='o.date_invoice']"
