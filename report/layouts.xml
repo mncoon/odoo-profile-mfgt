@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
+
+        <record id="paperformat_a4_din5008" model="report.paperformat">
+            <field name="name">A4 DIN5008</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">23</field>
+            <field name="margin_left">22</field>
+            <field name="margin_right">17</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">27</field>
+            <field name="dpi">90</field>
+        </record>
         
         <template id="assets_common"
                   inherit_id="report.assets_common">
@@ -10,16 +26,16 @@
         </template>
 
         <template id="external_layout_header">
-            <div class="header" style="font-size: 7pt; margin-bottom: 10px; border-bottom: 1px solid">
+            <div class="header" style="font-size: 7pt;">
                 <div class="row">
-                    <div class="col-xs-7">
+                    <div class="col-xs-7" style="position: absolute;">
                         <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height: 80px;"/>
                     </div>
-                    <div class="col-xs-5"
+                    <div class="col-xs-5 col-xs-offset-7"
                          t-field="company.partner_id"
                          t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 10px">
                     <div class="col-xs-5 col-xs-offset-7">
                         <span t-field="company.phone"/> / <span t-field="company.email"/> / <span t-field="company.website"/><br/>
                         UID / MWSt.: CHE-109.029.890<br/>
@@ -30,14 +46,12 @@
         </template>
 
         <template id="external_layout_footer">
-            <div class="footer mfgt-report-footer">
-                <div class="mfgt-report-footer-wrapper">
-                    <b>Flugplatz Lommis TG</b>
-                    <b>Flugschule</b>
-                    <b>Rundflüge</b>
-                    <b>Flugzeug-Charter</b>
-                    <b>Luftfahrzeug-Unterhaltsbetrieb</b>
-                </div>
+            <div class="footer">
+                <b>Flugplatz Lommis TG</b>
+                <b>Flugschule</b>
+                <b>Rundflüge</b>
+                <b>Flugzeug-Charter</b>
+                <b>Luftfahrzeug-Unterhaltsbetrieb</b>
             </div>
         </template>
 

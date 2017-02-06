@@ -4,6 +4,19 @@
 
         <template id="report_saleorder_document"
                   inherit_id="sale.report_saleorder_document">
+            <xpath expr="//strong[@t-if='doc.partner_shipping_id == doc.partner_invoice_id']"
+                   position="replace"/>
+            <xpath expr="//strong[@t-if='doc.partner_shipping_id != doc.partner_invoice_id']"
+                   position="replace"/>
+            <xpath expr="//div[@t-if='doc.partner_shipping_id != doc.partner_invoice_id']"
+                   position="replace"/>
+            <!-- Remove second address in right column -->
+            <xpath expr="//div[@class='row'][1]/div[2]"
+                   position="replace"/>
+            <xpath expr="//div[@t-field='doc.partner_invoice_id']"
+                   position="attributes">
+                <attribute name="t-field-options">{"widget": "contact", "fields": ["address", "name"], "no_marker": true}</attribute>
+            </xpath>
             <xpath expr="//div[@class='row'][1]" position="before">
                 <t t-set="salesperson" t-value="doc.user_id"/>
                 <div t-if="salesperson" class="row" style="font-size: 7pt; margin-bottom: 10px">
@@ -13,6 +26,16 @@
                         <span t-field="salesperson.phone"/> / <span t-field="salesperson.phone"/>
                     </div>
                 </div>
+            </xpath>
+            <xpath expr="//h2" position="before">
+                <div class="text-right">
+                    <span t-field="doc.company_id.city"/>,
+                    <span t-field="doc.date_order"
+                          t-field-options='{"date_only": true}'/>
+                </div>
+            </xpath>
+            <xpath expr="//p[@t-field='doc.date_order']" position="attributes">
+                <attribute name="t-field-options">{"date_only": true}</attribute>
             </xpath>
         </template>
 
