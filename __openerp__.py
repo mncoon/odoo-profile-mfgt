@@ -3,7 +3,7 @@
 # this module contains the full copyright notices and license terms.
 {
     'name': 'Profile MFGT Online Team',
-    'version': '9.0.0.1.1',
+    'version': '9.0.0.1.2',
     'author': 'Hucke Media GmbH & Co. KG/IFE GmbH',
     'category': 'Custom',
     'website': 'https://www.hucke-media.de/',

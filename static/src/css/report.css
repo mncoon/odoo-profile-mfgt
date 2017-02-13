@@ -3,3 +3,7 @@ div.footer {
     text-align: justify;
     white-space: nowrap;
 }
+
+.mfgt-company-city-date-line {
+    margin-bottom: 60px;
+}

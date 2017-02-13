@@ -13,7 +13,7 @@
                 <attribute name="t-field-options">{"date_only": true}</attribute>
             </xpath>            
             <xpath expr="//h2" position="before">
-                <div class="text-right">
+                <div class="mfgt-company-city-date-line text-right">
                     <span t-field="o.company_id.city"/>,
                     <span t-field="o.date_order"
                           t-field-options='{"date_only": true}'/>
