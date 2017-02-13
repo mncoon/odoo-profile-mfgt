@@ -9,7 +9,7 @@
                 <attribute name="class">col-xs-5</attribute>
             </xpath>
             <xpath expr="//h2" position="before">
-                <div class="mfgt-company-city-date-line text-right">
+                <div class="mfgt-company-city-date-line col-xs-offset-7">
                     <span t-field="o.company_id.city"/>,
                     <span t-field="o.date_invoice"/>
                 </div>

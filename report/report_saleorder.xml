@@ -28,7 +28,7 @@
                 </div>
             </xpath>
             <xpath expr="//h2" position="before">
-                <div class="mfgt-company-city-date-line text-right">
+                <div class="mfgt-company-city-date-line col-xs-offset-7">
                     <span t-field="doc.company_id.city"/>,
                     <span t-field="doc.date_order"
                           t-field-options='{"date_only": true}'/>
