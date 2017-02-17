@@ -47,11 +47,15 @@
 
         <template id="external_layout_footer">
             <div class="footer">
-                <b>Flugplatz Lommis TG</b>
-                <b>Flugschule</b>
-                <b>Rundflüge</b>
-                <b>Flugzeug-Charter</b>
-                <b>Luftfahrzeug-Unterhaltsbetrieb</b>
+                <div class="col-xs-3">
+                    <b>Flugplatz Lommis TG</b>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <b>Flugschule</b>
+                    <b>Rundflüge</b>
+                    <b>Flugzeug-Charter</b>
+                    <b>Luftfahrzeug-Unterhaltsbetrieb</b>
+                </div>
             </div>
         </template>
 
