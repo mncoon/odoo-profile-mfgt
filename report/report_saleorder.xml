@@ -19,11 +19,12 @@
             </xpath>
             <xpath expr="//div[@class='row'][1]" position="before">
                 <t t-set="salesperson" t-value="doc.user_id"/>
+                <t t-set="salesteam" t-value="doc.team_id"/>
                 <div t-if="salesperson" class="row" style="font-size: 7pt; margin-bottom: 10px">
                     <div class="col-xs-5 col-xs-offset-7">
-                        Sekretariat<br/>
+                        <span t-field="salesteam.name"/><br/>
                         <span t-field="salesperson.name"/><br/>
-                        <span t-field="salesperson.phone"/> / <span t-field="salesperson.phone"/>
+                        <span t-field="salesperson.phone"/> / <span t-field="salesteam.alias_name"/>@<span t-field="salesteam.alias_domain"/>
                     </div>
                 </div>
             </xpath>
