@@ -17,6 +17,9 @@
                    position="attributes">
                 <attribute name="t-field-options">{"widget": "contact", "fields": ["address", "name"], "no_marker": true}</attribute>
             </xpath>
+            <!-- Remove salesperson -->
+            <xpath expr="//div[@id='informations'][1]/div[3]"
+                   position="replace"/>
             <xpath expr="//div[@class='row'][1]" position="before">
                 <t t-set="salesperson" t-value="doc.user_id"/>
                 <t t-set="salesteam" t-value="doc.team_id"/>
