@@ -1,6 +1,14 @@
+div.page {
+    margin-left:25mm;
+    padding-top:20mm;
+}
+
+div.salesteam {
+    margin-top:-20mm;
+}
 
 div.footer {
-    text-align: justify;
+    text-align: center;
     white-space: nowrap;
 }
 

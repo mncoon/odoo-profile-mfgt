@@ -11,8 +11,10 @@
     'summary': 'Customizations for MFGT',
     'depends': [
         'report',
+        'account',
         'sale',
         'purchase',
+        'crm',
     ],
     'data': [
         'report/layouts.xml',
